@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+          body{
+            background-color: rgb(49, 176, 235);
+          }
+          .box
+          {
+             margin-top:1cm;; 
+             margin-bottom: 1cm;
+             margin-left: 35%;
+             margin-right: 35%;  
+             background-color: azure;
+             border-radius: 12px;
+             padding:20px 20px;
+             justify-items: center;
+             
+        }
+       
+        .inputandoutput{
+            background-color: aqua;
+            margin-top: 4cm;
+            margin-bottom: 1cm;
+        }
+        tr{
+        margin-bottom: 0.1cm;
+        }
+        button{
+             text-align: center;
+             width: 1.5cm;
+             height:1.5cm;
+             margin:0.1cm;
+             border-radius: 12%;
+             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             background-color: rgb(170, 234, 255);
+             border-color:rgb(170, 234, 255)
+        }
+        #sy:hover{
+            cursor: pointer;
+           background-color: rgb(45, 233, 233);
+        }
+        #num:hover{
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+        input{
+            font-size: 1cm;
+            text-align:right ;
+            width:8.7cm;
+            height:1.5cm;
+            flex-wrap: wrap;
+        }
+        #sy{
+            background-color: rgb(13, 211, 230);
+         font-size: 0.5cm;
+         color: rgb(35, 114, 141);
+        }
+        #num{
+            background-color: rgb(0, 234, 255);
+            font-size:0.6cm
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+      <h2>
+        
+    <table>
+      <tr><td style="background-color: white; color: lightgray;" id="expression"></td></tr>
+      <tr><td><input id="result" type="text" placeholder="0"></td></tr>
+    </table>
+ <table> 
+        <tr>
+            <td ><button id="sy"  onclick="add('(')">(</button></td>
+            <td ><button id="sy" onclick="add(')')">)</button></td>
+            <td ><button id="sy" onclick="calculate()">ans</button></td>
+            <td ><button id="sy" onclick="del()">del</button></td>
+            <td ><button id="sy" onclick="clearresult()">clear</button></td>
+        </tr>
+
+        <tr>
+        <td><button id="num" onclick="add('7')">7</button></td>
+        <td><button id="num" onclick="add('8')">8</button></td>
+        <td><button id="num" onclick="add('9')">9</button></td>
+        <td ><button id="sy" onclick="add('%')">%</button></td>
+        <td ><button id="sy" onclick="squareroot()">√</button></td>
+    </tr>
+    <tr><td><button id="num" onclick="add('4')">4</button></td>
+        <td ><button id="num" onclick="add('5')">5</button></td>
+        <td ><button id="num" onclick="add('6')">6</button></td>
+        <td ><button id="sy" onclick="add('*')">×</button></td>
+        <td ><button id="sy" onclick="add('/')">÷</button></td>    
+    </tr>
+    <tr><td ><button id="num" onclick="add('1')">1 </button></td>   
+        <td ><button id="num" onclick="add('2')">2</button></td>
+        <td><button id="num" onclick="add('3')">3</button></td>
+        <td><button id="sy" onclick="add('+')">+</button></td>
+        <td ><button id="sy" onclick="add('-')">-</button></td>
+      </tr>
+    </table>
+    <table>
+    <tr><td><button id="sy" onclick="add('.')">.</button></td>
+        <td ><button id="num" onclick="add('0')">0</button></td>
+        <td ><button id="sy" onclick="opp()">±</button></td> 
+        <td><button id="sy" style="width:3.5cm;" onclick="Enter()">ENTER</button></td> 
+    </tr>
+    </table>
+
+<script src="calculator.js"></script>
+
+</table></h2>
+          
+
+
+
+    </div>   
+</body>
+</html>
